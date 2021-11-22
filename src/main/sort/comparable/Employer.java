@@ -1,4 +1,4 @@
-package main.comparator;
+package main.sort.comparable;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,7 +8,7 @@ import java.util.List;
  * @author s.melekhin
  * @since 21 нояб. 2021 г.
  */
-public class Employer {
+public class Employer implements Comparable<Employer> {
 
     public static void main(String[] args) {
         List<Employer> list = new ArrayList<>();
@@ -19,9 +19,10 @@ public class Employer {
         list.add(emp2);
         list.add(emp1);
         System.out.println("Before sort \n" + list);
-        list.sort(new IdComparator());
+        Collections.sort(list);
         System.out.println("After sort \n" + list);
     }
+
     int id;
     String name;
     String surname;
@@ -44,4 +45,19 @@ public class Employer {
                 '}';
     }
 
+    @Override
+    public int compareTo(Employer o) {
+//        if (this.id == o.id) {
+//            return 0;
+//        } else if (this.id > o.id) {
+//            return 1;
+//        } else {
+//            return -1;
+//        }
+//        or
+//        return this.id - o.id;
+//        or
+//        return this.name.compareTo(o.name);
+        return Integer.compare(this.id, o.id);
+    }
 }
