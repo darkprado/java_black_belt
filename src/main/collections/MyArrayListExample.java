@@ -55,6 +55,26 @@ public class MyArrayListExample {
 
         System.out.println(studentList);
 
+        studentList.add(st5);
+
+        ArrayList<String> arrayList2 = new ArrayList<>();
+        arrayList2.add("!!!");
+        arrayList2.add("???");
+        arrayList2.addAll(arrayListString);
+        arrayList2.addAll(0, arrayListString);
+
+        System.out.println(arrayList2);
+
+        arrayList2.clear();
+
+        System.out.println(arrayList2.isEmpty());
+
+        System.out.println(studentList.indexOf(st6)); //lastIndexOf()
+
+        System.out.println(studentList.size());
+
+        System.out.println(arrayListString.contains("Stanislav"));
+
     }
 
 }
