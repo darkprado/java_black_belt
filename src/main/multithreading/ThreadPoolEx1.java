@@ -2,13 +2,12 @@ package main.multithreading;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author s.melekhin
  * @since 01 март 2022 г.
  */
-public class ThredPoolEx1 {
+public class ThreadPoolEx1 {
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(5);
