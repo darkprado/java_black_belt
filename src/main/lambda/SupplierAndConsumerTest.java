@@ -9,7 +9,7 @@ import java.util.function.Supplier;
  * @author s.melekhin
  * @since 30 март 2022 г.
  */
-public class SupplierTest {
+public class SupplierAndConsumerTest {
 
     public static List<Car> createThreeCars(Supplier<Car> carSupplier) {
         List<Car> al = new ArrayList<>();
